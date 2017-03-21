@@ -1,0 +1,27 @@
+spring:
+ dataSource:
+  url: jdbc:mysql://192.168.1.187:3306/kuting?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+  username: root
+  password: abc123
+  driver-class-name: com.mysql.jdbc.Driver
+  type: com.alibaba.druid.pool.DruidDataSource
+  druid:
+   max-active: 20
+   initial-size: 1
+   min-idle: 3
+   max-wait: 60000
+   time-between-eviction-runs-millis: 60000
+   min-evictable-idle-time-millis: 300000
+   test-while-idle: true
+   test-on-borrow: false
+   test-on-return: false
+ mvc:
+  view:
+   prefix: WEB-INF/pages/
+   suffix: .ftl
+   defaultEncoding: UTF-8
+   cache: true
+   contentType: text/html; charset=utf-8
+   
+
+debug: true
